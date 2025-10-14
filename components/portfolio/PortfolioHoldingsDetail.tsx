@@ -21,7 +21,9 @@ const CategoryBadge: React.FC<{ category: AssetDescription['category'] }> = ({ c
 
 const PortfolioHoldingsDetail: React.FC<PortfolioHoldingsDetailProps> = ({ weights }) => {
   const holdings = Object.entries(weights)
-    .filter(([, weight]) => weight > 0)
+    // FIX: Added a type guard to ensure `weight` is a number before comparison and use.
+    // This resolves issues where `Object.entries` might infer the value as `unknown`.
+    .filter(([, weight]) => typeof weight === 'number' && weight > 0)
     .map(([ticker, weight]) => ({
       ...MOCK_ASSET_DESCRIPTIONS[ticker],
       weight,
