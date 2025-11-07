@@ -5,7 +5,6 @@ import { explainPortfolio, getStressTestExplanation } from '../services/geminiSe
 import InteractiveAllocation from '../components/portfolio/InteractiveAllocation';
 import PerformanceChart from '../components/charts/PerformanceChart';
 import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
 import PortfolioHoldingsDetail from '../components/portfolio/PortfolioHoldingsDetail';
 
 const MetricCard: React.FC<{ title: string; value: string; }> = ({ title, value }) => (
@@ -107,7 +106,12 @@ const CorePortfolioPage: React.FC = () => {
         {isLoading ? <div className="animate-pulse h-24 bg-gray-100 rounded"></div> : <p className="text-brand-secondary">{explanation}</p>}
       </Card>
       
-      <div className="pt-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+      <Card className="p-6 animate-fade-in-up" style={{animationDelay: '0.4s'}}>
+        <h2 className="text-xl font-semibold text-brand-gold mb-2">AI Stress Test: What if 2008 Repeats?</h2>
+        {isLoading ? <div className="animate-pulse h-12 bg-gray-100 rounded"></div> : <p className="text-brand-secondary">{stressTest}</p>}
+      </Card>
+
+      <div className="pt-6 animate-fade-in-up" style={{animationDelay: '0.5s'}}>
           <div className="text-center mb-6">
             <h2 className="text-3xl font-bold text-brand-primary mb-2">Detailed Holdings Breakdown</h2>
             <p className="max-w-xl mx-auto text-brand-secondary">
