@@ -27,6 +27,7 @@
             animation: {
               'fade-in': 'fadeIn 0.5s ease-in-out',
               'fade-in-up': 'fadeInUp 0.6s ease-in-out',
+              'spin': 'spin 1s linear infinite',
             },
             keyframes: {
               fadeIn: {
@@ -36,6 +37,10 @@
               fadeInUp: {
                 '0%': { opacity: '0', transform: 'translateY(20px)' },
                 '100%': { opacity: '1', transform: 'translateY(0)' },
+              },
+              spin: {
+                from: { transform: 'rotate(0deg)' },
+                to: { transform: 'rotate(360deg)' },
               }
             },
           },
@@ -58,7 +63,16 @@
 </script>
 </head>
   <body class="bg-brand-bg text-brand-primary">
-    <div id="root"></div>
+    <div id="root">
+      <div class="flex flex-col items-center justify-center min-h-screen">
+        <svg class="animate-spin h-10 w-10 text-brand-blue" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+          <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+          <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+        </svg>
+        <h1 class="text-2xl font-semibold mt-4 text-brand-primary">Loading QuantLeap AI...</h1>
+        <p class="mt-2 text-brand-secondary">Please wait a moment while we prepare your dashboard.</p>
+      </div>
+    </div>
     <script type="module" src="./index.tsx"></script>
   </body>
 </html>

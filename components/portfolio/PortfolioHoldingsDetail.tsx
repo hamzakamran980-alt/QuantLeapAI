@@ -40,7 +40,8 @@ const PortfolioHoldingsDetail: React.FC<PortfolioHoldingsDetailProps> = ({ weigh
             </div>
             <div className="text-left sm:text-right mt-2 sm:mt-0">
               <p className="text-sm text-brand-secondary">Portfolio Weight</p>
-              <p className="text-2xl font-semibold text-brand-blue">{(holding.weight * 100).toFixed(1)}%</p>
+              {/* FIX: Explicitly cast holding.weight to a number to resolve a TypeScript error where its type was not being correctly inferred. */}
+              <p className="text-2xl font-semibold text-brand-blue">{((holding.weight as number) * 100).toFixed(1)}%</p>
             </div>
           </div>
           
