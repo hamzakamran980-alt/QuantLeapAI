@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import { explainPortfolio, getStressTestExplanation } from '../services/geminiService';
+import { explainPortfolio, getStressTestExplanation } from '../services/marketService';
 import InteractiveAllocation from '../components/portfolio/InteractiveAllocation';
 import PerformanceChart from '../components/charts/PerformanceChart';
 import Card from '../components/ui/Card';

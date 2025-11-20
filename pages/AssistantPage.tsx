@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { getChatResponse } from '../services/geminiService';
+import { getChatResponse } from '../services/marketService';
 import { ChatMessage } from '../types';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';

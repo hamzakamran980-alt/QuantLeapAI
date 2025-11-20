@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { getStockDetails } from '../services/geminiService';
+import { getStockDetails } from '../services/marketService';
 import { StockDetail, RecommendationCategory } from '../types';
 import Card from '../components/ui/Card';
 import PerformanceChart from '../components/charts/PerformanceChart';

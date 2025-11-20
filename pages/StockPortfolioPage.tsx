@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAppContext } from '../context/AppContext';
-import { explainStockPortfolio } from '../services/geminiService';
+import { explainStockPortfolio } from '../services/marketService';
 import PerformanceChart from '../components/charts/PerformanceChart';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';

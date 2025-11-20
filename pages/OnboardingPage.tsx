@@ -5,7 +5,7 @@ import { RiskAnswers, RiskBucket, RiskProfile, Portfolio } from '../types';
 import { useAppContext } from '../context/AppContext';
 import Button from '../components/ui/Button';
 import Card from '../components/ui/Card';
-import { createPersonalizedStockPortfolio } from '../services/geminiService';
+import { createPersonalizedStockPortfolio } from '../services/marketService';
 
 const OnboardingPage: React.FC = () => {
   const [currentStep, setCurrentStep] = useState(0);
