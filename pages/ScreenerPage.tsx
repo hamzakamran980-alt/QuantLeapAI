@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useMemo } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
-import { getRankedStocks, getStockScreenerExplanation } from '../services/geminiService';
+import { getRankedStocks, getStockScreenerExplanation } from '../services/marketService';
 import { Stock, RecommendationCategory, RiskBucket } from '../types';
 import Card from '../components/ui/Card';
 import TeacherAssistant from '../components/TeacherAssistant';

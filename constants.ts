@@ -273,16 +273,6 @@ const MOCK_STOCK_DETAILS_DATA: Omit<StockDetail, 'historicalData' | 'forecastDat
         profile: 'Adobe Inc. operates as a diversified software company worldwide. It operates through three segments: Digital Media, Digital Experience, and Publishing and Advertising.', marketCap: '235B', peRatio: 45.1, eps: 11.54, beta: 1.3, news: [{title: "Adobe Launches New AI-Powered Features", source: "TechCrunch", date: "1 week ago"}], forecastRationale: "The model anticipates continued strong performance driven by its subscription model and leadership in creative software. AI integration is a key future catalyst." 
     },
     { 
-        ticker: 'GOOGL', company: 'Alphabet Inc.', sector: 'Technology', price: 138.50, change: 0.8, dividendYield: 0, esgRating: 'Average',
-        recommendations: {
-            Conservative: { recommendation: 'Neutral', rationale: 'While a market leader, potential regulatory headwinds and its reliance on advertising introduce risks not ideal for conservative goals.' },
-            Balanced: { recommendation: 'Recommended', rationale: 'A core holding that provides exposure to digital advertising and cloud growth. Its strong balance sheet adds a layer of safety.' },
-            Growth: { recommendation: 'Highly Recommended', rationale: 'A leader in the foundational technologies of the future (AI, Cloud) with a dominant position in digital advertising.' },
-            Aggressive: { recommendation: 'Recommended', rationale: 'A strong growth story, but faces the law of large numbers. Smaller, more nimble companies may offer higher growth.' },
-        },
-        profile: 'Alphabet Inc. provides online advertising services in the United States, Europe, the Middle East, Africa, the Asia-Pacific, Canada, and Latin America.', marketCap: '1.7T', peRatio: 25.1, eps: 5.52, beta: 1.1, news: [{title: "Alphabet Faces New Antitrust Probe", source: "Reuters", date: "3 days ago"}], forecastRationale: "The forecast assumes continued dominance in search advertising. However, potential regulatory fines and changes to ad tracking could impact future revenue streams." 
-    },
-    { 
         ticker: 'AMZN', company: 'Amazon.com, Inc.', sector: 'Consumer Discretionary', price: 134.25, change: 2.1, dividendYield: 0, esgRating: 'Laggard',
         recommendations: {
             Conservative: { recommendation: 'Consider Caution', rationale: 'High valuation and focus on growth over profits make it less suitable for investors prioritizing capital preservation.' },
